@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samurai Todo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-8">
+
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-5xl font-bold text-center mb-10 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      <i class="fas fa-sword mr-4"></i>Samurai Todo
+    </h1>
+
+    <div class="bg-gray-800 rounded-2xl p-8 shadow-2xl">
+      <div class="flex gap-3 mb-8">
+        <input type="text" id="new-task" placeholder="What needs to be destroyed today?" 
+               class="flex-1 bg-gray-900 px-6 py-4 rounded-lg text-lg focus:outline-none focus:ring-4 focus:ring-purple-500">
+        <button id="add-btn" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg font-bold text-xl hover:scale-105 transition">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+
+      <div class="space-y-8">
+        <section id="pending">
+          <h2 class="text-2xl font-bold mb-4 text-cyan-400">To Do</h2>
+          <div id="pending-list" class="space-y-3 min-h-96"></div>
+        </section>
+
+        <section id="completed">
+          <h2 class="text-2xl font-bold mb-4 text-green-400">Done</h2>
+          <div id="completed-list" class="space-y-3 min-h-96"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
